@@ -1,23 +1,24 @@
 <template>
   <div id="app">
-    <h1>App组件</h1>
+    <Header></Header>
+    <!-- 所有的一级路由都在此显示 -->
+    <router-view></router-view>
+    <Fooder></Fooder>
   </div>
 </template>
 
 <script>
+import Header from './components/Header'
+import Fooder from './components/Fooder'
 
 export default {
   name: 'App',
+  components:{
+    Header,
+    Fooder
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
