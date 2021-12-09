@@ -3,7 +3,8 @@
     <Header></Header>
     <!-- 所有的一级路由都在此显示 -->
     <router-view></router-view>
-    <Fooder></Fooder>
+    <Fooder v-show="!$route.meta.isHideFooter"></Fooder>
+    
   </div>
 </template>
 
