@@ -1,0 +1,42 @@
+[
+    {
+        "carouselList":[
+            {
+                "id":3,
+                "imgUrl": "/images/like_02.png",
+                "text": "阳光美包新款单肩包女包时尚子母包四件套女",
+                "jiage":"¥11600.00"
+            },
+            {
+                "id":2,
+                "imgUrl": "/images/like_03.png",
+                "text": "阳光美包新款单肩包女包时尚子母包四件套女",
+                "jiage":"¥116.00"
+            },
+            {
+                "id":1,
+                "imgUrl": "/images/like_02.png",
+                "text": "阳光美包新款单肩包女包时尚子母包四件套女",
+                "jiage":"¥116.00"
+            },
+            {
+                "id":4,
+                "imgUrl": "/images/like_01.png",
+                "text": "阳光美包新款单肩包女包时尚子母包四件套女",
+                "jiage":"¥116.00"
+            },
+            {
+                "id":5,
+                "imgUrl": "/images/like_03.png",
+                "text": "阳光美包新款单肩包女包时尚子母包四件套女",
+                "jiage":"¥116.00"
+            },
+            {
+                "id":6,
+                "imgUrl": "/images/like_02.png",
+                "text": "阳光美包新款单肩包女包时尚子母包四件套女",
+                "jiage":"¥116.00"
+            }
+        ]
+    }
+]

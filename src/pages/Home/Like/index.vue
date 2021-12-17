@@ -6,15 +6,15 @@
         <a href="javascript:;" class="fr tip changeBnt">换一换</a>
       </div>
       <div class="bd">
-        <ul class="favourate">
-          <li>
-            <img src="./images/like_02.png" alt="" />
+        <ul class="favourate" v-for="(item,index) in like" :key="index">
+          <li v-for="like in item.carouselList" :key="like.id">
+            <img :src="like.imgUrl"/>
             <div class="like-text">
-              <p>阳光美包新款单肩包女包时尚子母包四件套女</p>
-              <h3>¥116.00</h3>
+              <p>{{like.text}}</p>
+              <h3>{{like.jiage}}</h3>
             </div>
           </li>
-          <li>
+          <!-- <li>
             <img src="./images/like_03.png" alt="" />
             <div class="like-text">
               <p>阳光美包新款单肩包女包时尚子母包四件套女</p>
@@ -48,7 +48,7 @@
               <p>阳光美包新款单肩包女包时尚子母包四件套女</p>
               <h3>¥116.00</h3>
             </div>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -56,8 +56,14 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: "Like",
+  computed:{
+    ...mapState({
+      like: state => state.home.like
+    })
+  }
 };
 </script>
 
