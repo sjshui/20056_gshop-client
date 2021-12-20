@@ -82,7 +82,17 @@ export default {
                 router.push(location).then(onComplete).catch(onAbort)
             */
 
-           this.$router.push(location)
+            // 跳转到search
+            /*
+              从首页到搜索页：push()
+              从搜索到首页： replace()  
+            */
+            if(this.$route.name === 'search'){ // 当前时搜索
+              this.$router.replace(location)
+            } else{
+              this.$router.push(location)
+            }
+            
 
             // 解决重复跳转路由的错误
             // 方法一：传入成功回调函数参数
@@ -90,7 +100,19 @@ export default {
             // 方法：catch处理错误的promise
             // console.log(this.$router.push(location).catch(()=>{}))
       }
-  }
+  },
+
+  mounted(){
+    this.$bus.$on('removeKye',() => {
+      // 2.在Header中绑定自定义事件监听，在回调中清除数据
+      this.keyword = ''
+    })
+  },
+
+  beforeDestroy() {
+    this,$bus.$off('removeKye')
+  },
+
 };
 </script>
 

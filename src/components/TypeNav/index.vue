@@ -157,7 +157,7 @@ export default {
           this.currentIndex = index;
         }
       },
-      500 /* ,{
+      100 /* ,{
       trailing: false, // 最后一次事件不延时处理
     } */
     ),
@@ -194,7 +194,18 @@ export default {
         }
 
         // 跳转到search
-        this.$router.push(location);
+        /*
+          从首页到搜索页：push()
+          从搜索到首页： replace()  
+        */
+        if(this.$route.name === 'search'){ // 当前时搜索
+          this.$router.replace(location)
+        } else{
+          this.$router.push(location)
+        }
+
+        // 隐藏一级分类列表
+         this.hideFirst()
       }
     },
   },

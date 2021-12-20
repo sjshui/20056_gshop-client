@@ -12,7 +12,7 @@
 
 <script>
 import {mapState} from 'vuex'
-import ListContainer from "./ListContainer/index.vue";
+import ListContainer from "./ListContainer/index";
 import TodayRecommend from "./TodayRecommend/index.vue";
 import Rank from "./Rank/index.vue";
 import Like from "./Like";

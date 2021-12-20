@@ -21,6 +21,15 @@ const actions = {
         根据指定的搜索条件，异步获取商品列表的action
     */
    async getProductList({commit},searchParams){
+    // 因为不想删除组件search组件中的options中的数据
+    searchParams = {...searchParams}
+    // 删除searchParams中的空串或数组数组
+    Object.keys(searchParams).forEach(key => {
+        if(searchParams[key] === '' || (Array.isArray(searchParams[key]) && searchParams[key].length=== 0)){
+            delete searchParams[key]
+        }
+    })
+
     // 1. ajax请求，获取数据
     const result = await reqSearch(searchParams)
     // 2. 如果成功，提交给mutation
@@ -43,6 +52,9 @@ const getters = {
     // 属性列表
     attrsList (state) {
         return state.productList.attrsList || []
+    },
+    total(state){
+        return state.productList.total || 0
     }
 }
 
