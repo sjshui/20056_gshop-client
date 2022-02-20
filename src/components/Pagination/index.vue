@@ -38,7 +38,7 @@
 
 <script>
 export default {
-  name: "Pagination",
+  name: "MyPagination",
   props: {
     currentPage: {
       // 当前页码

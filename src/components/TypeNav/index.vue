@@ -157,7 +157,7 @@ export default {
           this.currentIndex = index;
         }
       },
-      100 /* ,{
+      200 /* ,{
       trailing: false, // 最后一次事件不延时处理
     } */
     ),

@@ -81,9 +81,9 @@
               <li class="yui3-u-1-5" v-for="item in goodsList" :key="item.id">
                 <div class="list-wrap">
                   <div class="p-img">
-                    <a href="javascript:">
-                      <img :src="item.defaultImg" />
-                    </a>
+                    <router-link :to="'/detail/' + item.id">
+                      <img  v-lazy="item.defaultImg" />
+                    </router-link>
                   </div>
                   <div class="price">
                     <strong>
@@ -92,7 +92,9 @@
                     </strong>
                   </div>
                   <div class="attr">
-                    <a href="javascript:">{{item.title}}</a>
+                    <router-link :to="'/detail/' + item.id">
+                      {{item.title}}
+                    </router-link>
                   </div>
                   <div class="commit">
                     <i class="command">已有<span>2000</span>人评价</i>
@@ -105,7 +107,7 @@
               </li>
             </ul>
           </div>
-            <Pagination
+            <MyPagination
             :currentPage="options.pageNo"
             :total="total"
             :pageSize="options.pageSize"
@@ -136,7 +138,7 @@
 
           // trademark: '', // 品牌: "ID:品牌名称" "1:苹果"
           props: [], // 商品属性的数组: ["属性ID:属性值:属性名"] ["2:6.0～6.24英寸:屏幕尺寸"]
-          order: '1:asc', // 排序方式  1: 综合,2: 价格 asc: 升序,desc: 降序  "1:desc"
+          order: '1:desc', // 排序方式  1: 综合,2: 价格 asc: 升序,desc: 降序  "1:desc"
 
           pageNo: 1, // 页码
           pageSize: 10, //	每页数量

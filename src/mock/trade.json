@@ -1,0 +1,18 @@
+[
+    {
+        "consignee":"admin",
+        "id":"2",
+        "isDefault":"1",
+        "phoneNum":"15170139245",
+        "userAddress":"江西赣州",
+        "userId":2
+    },
+    {
+        "consignee":"Ss",
+        "id":"1",
+        "isDefault":"0",
+        "phoneNum":"15170139246",
+        "userAddress":"江西赣州2",
+        "userId":1
+    }
+]

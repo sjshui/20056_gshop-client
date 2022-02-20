@@ -201,12 +201,12 @@ export default {
           width: 25%;
 
           .list-item {
-            background-image: url(./images/icons.png);
+            background-image: url(../../../assets/images/icons.png);
             width: 61px;
             height: 40px;
             display: block;
           }
-
+s
           .service-intro {
             line-height: 22px;
             width: 60px;
@@ -295,7 +295,7 @@ export default {
           transition: all 400ms;
 
           &:hover {
-            opacity: 1;
+            opacity: 0.8;
           }
         }
       }

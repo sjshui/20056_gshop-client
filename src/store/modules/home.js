@@ -16,7 +16,7 @@ const state = {
     recommends: [],
     floors: [],
     rank:[],
-    like:[]
+    like:[],
 }
 const mutations = {
 
@@ -131,7 +131,7 @@ const actions = {
             const like = result.data
             commit('RECEIVE_LIKE', like)
         }
-    },
+    },    
 }
 const getters = {}
 
